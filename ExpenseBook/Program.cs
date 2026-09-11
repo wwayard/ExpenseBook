@@ -1,6 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using ExpenseBook.Data;
 using ExpenseBook.Logic;
-var service = new ExpenseBookServise();
+
+IExpenseRepository repository = new ExpenseBookRepository();
+var service = new ExpenseBookService(repository);
 Console.WriteLine("Отобранные записи:");
 foreach (var item in service.GetImportant())
 {

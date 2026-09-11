@@ -1,6 +1,8 @@
 
+using ExpenseBook.Logic;
+
 namespace ExpenseBook.Data;
-public class ExpenseBookRepository
+public class ExpenseBookRepository : IExpenseRepository
 {
     private readonly List<Expense> _items = new()
     {

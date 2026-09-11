@@ -1,4 +1,4 @@
-namespace ExpenseBook.Data;
+namespace ExpenseBook.Logic;
 public class Expense
 {
     public int Id { get; set; }

@@ -1,10 +1,14 @@
-using System.Net.Sockets;
-using ExpenseBook.Data;
+
 
 namespace ExpenseBook.Logic;
-public class ExpenseBookServise
+public class ExpenseBookService
 {
-    private readonly ExpenseBookRepository _repository = new();
+    private readonly IExpenseRepository _repository;
+
+    public ExpenseBookService(IExpenseRepository repository)
+    {       _repository = repository;
+    }
+
     public List<Expense> GetImportant()
     {
         return _repository.GetAll()
