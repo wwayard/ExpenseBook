@@ -1,4 +1,5 @@
 
+using System.Net.Sockets;
 using ExpenseBook.Logic;
 
 namespace ExpenseBook.Data;
@@ -16,5 +17,10 @@ new Expense { Id = 1, Category = "Кофе",
     public List<Expense> GetAll()
     {
         return _items;
+    }
+
+    public void Add(Expense item)
+    {
+        _items.Add(item);
     }
 }
